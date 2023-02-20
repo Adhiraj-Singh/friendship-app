@@ -17,28 +17,34 @@
 <h1 *ngIf="finalMonthsVal==0" class="bdayName">{{BirthdayPersonName}}'s Birthday in <span class="birthdayValue">{{finalDaysLeft}}</span> Days!</h1>
 
   <div class="card-container">
+
+    
     
 
     <div *ngFor="let friend of friendsInfo; let i = index" >
+      
       <img class = "spriteImage" src="https://api.dicebear.com/5.x/big-smile/svg?hair={{hair[i%hair.length]}}&mouth={{mouth[i%mouth.length]}}&eyes={{eyes[i%eyes.length]}}&skinColor={{skin[i%skin.length]}}&hairColor={{colors[i] | slice:-6}}" alt="avatar"/>
+      
       <div style.border-color="{{colors[i]}}" class="card">
-        
-        
 
+       
+          <button class="deleteButton" (click)='deleteFriend(i);'>X</button>
+        
         <div *ngFor="let details of friend | keyvalue:unsorted">
     
         <div  class="container">
         
         <div *ngIf="details.key!='Colour'">
+
           <h3 style.color="{{colors[i]}}" *ngIf="details.key!='BirthDate'"  class="title">{{details.key}}:
+            
             <span class="value">
               {{details.value}}
             </span>
+          
           </h3>
+        
         </div>
-
-          
-          
           
         </div>
       </div>

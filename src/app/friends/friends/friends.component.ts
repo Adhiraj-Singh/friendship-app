@@ -64,6 +64,9 @@ export class FriendsComponent implements OnInit {
   // put in values based on index from colour array
   // end of colour idea
 
+  deleteFriendsArrayDummy:any[]=[];
+  deleteFriendsArray:any[]=[];
+
   
   
   constructor(private router:Router) { }
@@ -143,6 +146,42 @@ export class FriendsComponent implements OnInit {
   // function for key order 
   unsorted() { 
     return 0;
+  }
+
+  // deleting a friend
+
+  // This approach looks fast visually but
+  // Big O notation is O(n). It is stable but it requires an extra inch of memory
+  // There has to be a away to delete the value directly in the local storagr
+  // But that key becomes 'undefined'
+  // Solution - what if ngfor i have ng if that checks for undefined??
+
+
+  
+  deleteFriend(indexVal: any) {
+    this.deleteFriendsArrayDummy = JSON.parse(localStorage.getItem('friendInfo') || '{}');
+    
+    // idea 
+    // iterate through local storage
+    // if index matched indexval dont include it in final array
+
+    for(let i = 0;i<this.deleteFriendsArrayDummy.length;i++) {
+      if(i!=indexVal) {
+        this.deleteFriendsArray.push(this.deleteFriendsArrayDummy[i]);
+      }
+    }
+
+    // removing current local
+    localStorage.removeItem('friendInfo');
+    // pushing updated local
+    localStorage.setItem('friendInfo',JSON.stringify(this.deleteFriendsArray));
+
+    // resetting deleteFriend array
+    this.deleteFriendsArray = [];
+
+    // reload page
+    window.location.reload();
+
   }
 
 }
