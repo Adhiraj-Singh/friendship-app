@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Special credits
+
+Friend sprites art work by - 
+The artist's Website is this - http://www.ashleyseo.com/. A big thank you to her for her amazing work. 
+Sprite image API from dicebear
