@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    background-color:#1a1a1d;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.addFriend {
+    background-color: #1a1a1d;
+    height: 2.5rem;
+    width: 10rem;
+    font-family: monospace;
+    font-size: larger;
+    justify-self: center;
+    border-radius: 10px;
+   border-color: #F5D33C;
+   border-width: 0.3;
+   text-decoration: none;
+    color:white;
+    cursor: pointer;
+}
+
+.friendsButton {
+    margin-left: 30px;
+    background-color: #1a1a1d;
+    height: 2.5rem;
+    width: 10rem;
+    font-family: monospace;
+    font-size: larger;
+    justify-self: center;
+    border-radius: 10px;
+   border-color: rgb(5, 160, 199);
+   border-width: 0.3;
+   text-decoration: none;
+    color:white;
+    cursor: pointer;
+}

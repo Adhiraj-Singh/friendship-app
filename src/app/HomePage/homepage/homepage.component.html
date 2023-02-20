@@ -1,0 +1,14 @@
+
+<head>
+    <title>Amigo</title>
+</head>
+<h1>{{title}}</h1>
+
+<img class="logo" src="assets/amigo.jpg">
+
+<button class="addFriend" (click)='loadForm();'>Add a buddy</button>
+<button class="friendsButton" routerLink="/FriendList">My Friends</button>
+
+<add-form *ngIf='loadComponent'></add-form>
+
+

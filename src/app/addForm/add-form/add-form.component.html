@@ -1,0 +1,57 @@
+
+
+<h3 class="inputSlogan">Please input their details!</h3>
+
+<form ngNativeValidate #addingFriend = "ngForm" (ngSubmit)="saveFriend(addingFriend.value)">
+
+    <div class="form-group">
+        <label for="Name">
+            
+        </label>
+
+        <h3>Name / Nick Name</h3>
+        
+        <input  name="Name" [(ngModel)]="Name" id= "Name" type="text" class="form-control" placeholder="Name" required/>
+
+
+    </div>
+    
+    <div class="form-group">
+        <h3 >Birthday</h3>
+        <input name="Birthday" [(ngModel)]="Birthday" type="Text" id="Birthday" placeholder="Birthday" >
+    </div>
+
+     <!--TEST-->
+     <div class="form-group">
+        <h3 >Add Birthday to Calender (Optional)</h3>
+        <input name="BirthDate" [(ngModel)]="BirthDate" type="Date" id="BirthDate" placeholder="" >
+    </div>
+
+    <!--END TEST-->
+
+
+    <!--TEST-->
+    <div class="form-group">
+        <h3>What is the colour of their vibe?</h3>
+        <input name="Colour" [(ngModel)]="Colour" type="color" id="Colour" placeholder="" value="#F5D33C" placeholder="#F5D33C" >
+    </div>
+
+    <!--END TEST-->
+
+    
+
+    <div class="form-group">
+        <h3 >What do they like? (Food, Animes, hobbies etc)</h3>
+        <input name="Likes" [(ngModel)]="Likes"  type="comment" id="likes" placeholder="sushi, action figures, knitting...." >
+    </div>
+
+   
+
+    
+
+    <button type="submit" (onclick)='loadRoster();' class="formSubmit">Save</button>
+</form>
+
+<button routerLink="/FriendList" class="rosterButton" *ngIf="loadRosterButton">View all Friends</button>
+
+

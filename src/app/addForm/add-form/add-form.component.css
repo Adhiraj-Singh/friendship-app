@@ -1,0 +1,96 @@
+
+
+form {
+    margin-top: 20px;
+    font-family: monospace;
+    
+    
+    width:400px;
+    background-color: #1a1a1d;
+    padding: 20px;
+    border-style:solid;
+    border-radius: 20px;
+    border-width: 3px;
+    border-color: #F5D33C;
+
+    animation: slideup 0.6s ease;
+   
+}
+
+input {
+    margin-bottom: 20px;
+    width: 150px;
+    border-radius: 5px;
+}
+
+.inputSlogan {
+    margin-top: 100px;
+    color: aliceblue;
+    animation: slideup 0.7s ease;
+    font-family: monospace;
+    font-size: 1.3rem;
+}
+
+h3 {
+    color: white;
+}
+
+#likes {
+    width: 300px;
+    
+}
+
+.formSubmit {
+    
+    margin-top: 20px;
+    height: 35px;
+    width: 100px;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: rgb(245, 211, 60);
+    cursor: pointer;
+    background-color: #1a1a1d;
+    color: white;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.formSubmit:active {
+    
+    
+    width: 50px;
+    
+    
+   
+
+}
+
+.rosterButton {
+    margin-top: 20px;
+    height: 50px;
+    width: 130px;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: rgb(5, 160, 199);
+    cursor: pointer;
+    background-color: #1a1a1d;
+    color: white;
+    transition: all 0.3s;
+    cursor: pointer;
+    animation: slideup 0.8s;
+    
+
+}
+
+ 
+@keyframes slideup {
+    0% {
+        opacity:0;
+        transform: translateY(300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}

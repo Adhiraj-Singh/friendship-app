@@ -1,0 +1,34 @@
+h1 {
+    text-align: center;
+    
+    color: #F5D33C;
+    font-size: 3rem;
+    font-family:monospace;
+    letter-spacing: 0.1rem;
+    
+}
+
+.friendsButton {
+    background-color: #1a1a1d;
+    height: 2.5rem;
+    width: 10rem;
+    font-family: monospace;
+    font-size: larger;
+    justify-self: center;
+    border-radius: 10px;
+   border-color: rgb(5, 160, 199);
+   border-width: 0.3;
+   text-decoration: none;
+    color:white;
+    cursor: pointer;
+    
+}
+
+.logo {
+    position: fixed;
+    top:10px;
+    left:10px;
+    height:100px;
+    width:100px;
+    border-radius: 20px;
+}

@@ -1,0 +1,58 @@
+<head>
+  <title>Amigo</title>
+</head>
+
+<h1>My Friends</h1>
+<a routerLink="/">
+  <img  class="logo" src="assets/amigo.jpg">
+  <p class="homeLink">Home Page</p>
+</a>
+
+
+
+<h1 *ngIf="xpVal!=null" class="xpval">Your XP: {{xpVal}}<sup *ngIf="xpVal!=null">?</sup> <span class="level">Level: {{myLevel}}</span>      </h1>
+<span class="hiddenInfo">The XP is calculated with weightages of number of friends and how many things you know about them</span>
+
+<h1 *ngIf="finalMonthsVal!=13 && finalMonthsVal!=0" class="bdayName">{{BirthdayPersonName}}'s Birthday in <span class="birthdayValue">{{finalMonthsVal}}</span>  Month(s)</h1>
+<h1 *ngIf="finalMonthsVal==0" class="bdayName">{{BirthdayPersonName}}'s Birthday in <span class="birthdayValue">{{finalDaysLeft}}</span> Days</h1>
+
+  <div class="card-container">
+    
+
+    <div *ngFor="let friend of friendsInfo; let i = index" >
+      <img class = "spriteImage" src="https://api.dicebear.com/5.x/big-smile/svg?hair={{hair[i%hair.length]}}&mouth={{mouth[i%mouth.length]}}&eyes={{eyes[i%eyes.length]}}&skinColor={{skin[i%skin.length]}}&hairColor={{colors[i] | slice:-6}}" alt="avatar"/>
+      <div style.border-color="{{colors[i]}}" class="card">
+        
+        
+
+        <div *ngFor="let details of friend | keyvalue:unsorted">
+    
+        <div  class="container">
+        
+        <div *ngIf="details.key!='Colour'">
+          <h3 style.color="{{colors[i]}}" *ngIf="details.key!='BirthDate'"  class="title">{{details.key}}:
+            <span class="value">
+              {{details.value}}
+            </span>
+          </h3>
+        </div>
+
+          
+          
+          
+        </div>
+      </div>
+      <!---
+      <img class = "spriteImage" src="https://api.dicebear.com/5.x/big-smile/svg?hair={{hair[i%hair.length]}}&mouth={{mouth[i%mouth.length]}}&eyes={{eyes[i%eyes.length]}}&skinColor={{skin[i%skin.length]}}&hairColor={{colors[i] | slice:-6}}" alt="avatar"/>   
+      -->
+    </div>
+    
+  </div>
+
+
+  </div>
+
+
+  
+
+
